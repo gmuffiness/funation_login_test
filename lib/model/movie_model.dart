@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class Movie {
   final String title;
   final String keyword;
@@ -13,6 +15,9 @@ class Movie {
         money = map['money'],
         percentage = map['percentage'],
         like = map['like'];
+
+  // Movie.fromSnapshot(DocumentSnapshot)
+  // : this.fromMap(snapshot.data, reference: snapshot.reference);
 
   @override
   String toString() => "Movie<$title:$keyword>";
